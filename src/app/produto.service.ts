@@ -14,7 +14,6 @@ const httpOptions = {
 export class ProdutoService{
 
   private produtoUrl = 'https://private-anon-d61f22f220-querotrabalharnawpensar.apiary-proxy.com/api/produtos';  // URL to web api
-  produtos:Produto[];
   constructor(private http: HttpClient) { }
 
   /** GET heroes from the server */

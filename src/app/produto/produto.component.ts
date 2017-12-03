@@ -23,9 +23,9 @@ export class ProdutoComponent implements OnInit {
   name = name.trim();
   if (!name) { return; }
   this.produtosService.addProduto(name)
-    .subscribe(produto => {
-      this.produtos.push(produto);
-    });
+    .subscribe(produto =>
+      this.produtos.push(produto)
+    );
   }
   // buscarprodutos(){
   //   this.dataService.getHero(this.searchId);

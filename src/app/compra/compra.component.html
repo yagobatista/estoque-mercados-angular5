@@ -1,3 +1,24 @@
-<p>
-  compra works!
-</p>
+<div class="col md-10">
+  <h2>Lista de compras</h2>
+  <div class="col md-3">
+    <input #nome type="text" placeholder="Nome"/>
+  </div>
+  <button type="button" name="button" (click)="addCompra(nome.value); nome.value=''">Cadastrar</button>
+  <table>
+  <thead>
+   <tr>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th>Preço</th>
+   </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let compra of compras">
+      <td>{{compra.produto}}</td>
+      <td>{{compra.quantidade}}</td>
+      <td>{{compra.preco}}</td>
+    </tr>
+
+  </tbody>
+ </table>
+</div>

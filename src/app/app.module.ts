@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CompraComponent } from './compra/compra.component';
 import { ProdutoService } from './produto.service';
+import { CompraService } from './compra.service';
 import {HttpClientModule} from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
@@ -26,7 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProdutoService],
+  providers: [ProdutoService,CompraService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

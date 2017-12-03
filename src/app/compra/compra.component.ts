@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Compra } from '../compra';
+import { Observable } from 'rxjs/Observable';
+import { CompraService } from '../compra.service';
 
 @Component({
   selector: 'compra',
@@ -6,10 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./compra.component.css']
 })
 export class CompraComponent implements OnInit {
-
-  constructor() { }
-
+  compras: Compra[];
+  currentHeroName: string = "teste";
+  searchId:number;
+  constructor(private comprasService: CompraService) { }
+  getCompras(): void {
+    this.comprasService.getCompras()
+      .subscribe(compras => this.compras = compras);
+  }
   ngOnInit() {
+    this.getCompras();
+  }
+  addCompra(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.comprasService.addCompra(name)
+      .subscribe(compra =>
+        this.compras.push(compra)
+      );
+  }
+  // buscarcompras(){
+  //   this.dataService.getHero(this.searchId);
+  // }
+  clear(){
+    this.compras= [];
   }
 
 }

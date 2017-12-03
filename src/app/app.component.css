@@ -5,13 +5,24 @@ nav{
 nav ul{
   padding-left: 10px;
   padding-right: 10px;
+  width: 100%;
+  list-style: none;
 }
 nav ul li a{
   color: #fff;
   font-size: 1.4em;
   text-decoration: none;
-}
-nav ul{
   width: 100%;
-  list-style: none;
+  display: flex;
+}
+nav ul li a:hover{
+  background-color: #4286f4;
+}
+nav ul li{
+  padding: 15px;
+}
+@media (min-width: 992px) {
+  nav ul{
+    margin-top: 150px;
+  }
 }
