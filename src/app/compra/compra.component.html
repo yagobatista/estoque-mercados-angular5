@@ -1,6 +1,6 @@
 <div class="col md-10">
   <h2>Lista de compras</h2>
-  <div *ngIf="cadastroVisivel == true">
+  <div class="cadastro" *ngIf="cadastroVisivel == true">
     <div class="row">
       <div class="col md-3">
         <select #produto >
@@ -27,7 +27,7 @@
   <div *ngIf="cadastroVisivel == false">
     <div class="row">
       <div class="col md-3">
-          <button type="button" name="button" (click)="mostrarCadastro()">Cadastrar</button>
+          <button type="button" name="button" (click)="mostrarCadastro()">Cadastrar compra</button>
         </div>
       </div>
 </div>

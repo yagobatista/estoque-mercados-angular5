@@ -24,6 +24,7 @@ export class CompraComponent implements OnInit {
   }
   ngOnInit() {
     this.produto.getprodutos();
+    this.produtos = this.produto.produtos;
     this.getCompras();
   }
   addCompra(nome: string,quantidade:number,preco:number): void {
