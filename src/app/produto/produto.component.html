@@ -1,3 +1,13 @@
-<p>
-  produto works!
-</p>
+<div class="col md-10">
+  <h2>Lista de produtos</h2>
+  <div class="col md-3">
+    <input #nome type="text" placeholder="Nome"/>
+  </div>
+  <button type="button" name="button" (click)="addProduto(nome.value); nome.value=''">Cadastrar</button>
+  <ul>
+    <li *ngFor="let produto of produtos ">
+        {{produto.nome}} <span>{{produto.id}}</span>
+    </li>
+  </ul>
+
+</div>

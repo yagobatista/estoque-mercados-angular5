@@ -12,6 +12,37 @@ a{
 body{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+[type=button]{
+  font-size: .8rem;
+padding: .85rem 2.13rem;
+margin: 6px;
+border-radius: 2px;
+border: 0;
+-webkit-transition: .2s ease-out;
+transition: .2s ease-out;
+white-space: normal !important;
+word-wrap: break-word;
+cursor: pointer;
+}
+ input[type="text"] {
+    background-color: transparent;
+    border: none;
+        border-bottom-width: medium;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    border-bottom: 1px solid #bdbdbd;
+    border-radius: 0;
+    outline: 0;
+    height: 2.1rem;
+    width: 100%;
+    font-size: 1rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
 *{
   -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
