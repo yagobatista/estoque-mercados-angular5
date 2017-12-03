@@ -19,14 +19,6 @@ export class ProdutoComponent implements OnInit {
   ngOnInit() {
     this.getprodutos();
   }
-  addProduto(name: string): void {
-  name = name.trim();
-  if (!name) { return; }
-  this.produtosService.addProduto(name)
-    .subscribe(produto =>
-      this.produtos.push(produto)
-    );
-  }
   // buscarprodutos(){
   //   this.dataService.getHero(this.searchId);
   // }

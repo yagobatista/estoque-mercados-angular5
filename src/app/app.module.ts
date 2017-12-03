@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { CompraCadastroComponent } from './compra-cadastro/compra-cadastro.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HomeComponent,
     ProdutoComponent,
-    CompraComponent
+    CompraComponent,
+    CompraCadastroComponent
   ],
   imports: [
     BrowserModule,
