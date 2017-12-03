@@ -3,7 +3,9 @@
   <div *ngIf="cadastroVisivel == true">
     <div class="row">
       <div class="col md-3">
-        <input #nome type="text" placeholder="Nome"/>
+        <select #produto >
+          <option *ngFor="let produto of produtos" value="{{produto.id}}">{{produto.nome}}</option>
+        </select>
       </div>
     </div>
     <div class="row">
@@ -18,7 +20,7 @@
     </div>
     <div class="row">
       <div class="col md-3">
-        <button type="button" name="button" (click)="addCompra(nome.value,quantidade.value,preco.value);">Cadastrar</button>
+        <button type="button" name="button" (click)="addCompra(produto.value,quantidade.value,preco.value);">Cadastrar</button>
       </div>
     </div>
   </div>

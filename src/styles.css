@@ -39,7 +39,7 @@ word-wrap: break-word;
 cursor: pointer;
 }
 input[type="text"] ,
-  input[type="number"] {
+  input[type="number"],select {
         background-color: transparent;
     border: none;
         border-bottom-width: medium;
