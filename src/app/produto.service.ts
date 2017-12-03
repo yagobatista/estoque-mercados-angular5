@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders,HttpParams } from '@angular/common/http';
 
 import { catchError, map, tap } from 'rxjs/operators';
-import 'rxjs/add/operator/map';
 
 import { Produto } from './produto';
 import { Observable } from 'rxjs/Observable';
@@ -24,7 +23,7 @@ export class ProdutoService{
     const url = `${this.produtoUrl}/${id}`;
     return this.http.get<Produto>(url);
   }
-  addProduto(nome:string): Observable<Produto> {
-  return this.http.post<Produto>(this.produtoUrl, nome, httpOptions);
+  addProduto(produto: Produto): Observable<Produto> {
+    return this.http.post<Produto>(this.produtoUrl, produto, httpOptions);
   }
 }

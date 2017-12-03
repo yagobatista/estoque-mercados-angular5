@@ -22,7 +22,7 @@ export class ProdutoComponent implements OnInit {
   addProduto(name: string): void {
   name = name.trim();
   if (!name) { return; }
-  this.produtosService.addProduto(name)
+  this.produtosService.addProduto({nome:name} as Produto)
     .subscribe(produto =>
       this.produtos.push(produto)
     );

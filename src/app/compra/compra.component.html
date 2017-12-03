@@ -1,9 +1,14 @@
 <div class="col md-10">
   <h2>Lista de compras</h2>
-  <div class="col md-3">
-    <input #nome type="text" placeholder="Nome"/>
+  <div *ngIf="cadastroVisivel == true">
+    <div class="col md-3">
+      <input #nome type="text" placeholder="Nome"/>
+    </div>
+    <button type="button" name="button" (click)="addCompra(nome.value); nome.value=''">Cadastrar</button>
   </div>
-  <button type="button" name="button" (click)="addCompra(nome.value); nome.value=''">Cadastrar</button>
+  <div *ngIf="cadastroVisivel == false">
+  <button type="button" name="button" (click)="mostrarCadastro()">Cadastrar</button>
+</div>
   <table>
   <thead>
    <tr>

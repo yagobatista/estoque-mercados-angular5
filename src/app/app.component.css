@@ -26,3 +26,25 @@ nav ul li{
     margin-top: 150px;
   }
 }
+@media (max-width:550px) {
+  nav{
+    height: auto;
+    position: fixed;
+    right: 0;
+left: 0;
+z-index: 1030;
+top: 0px;
+padding: 1px;
+text-align: center;
+  }
+  nav ul li:first-child{
+
+  }
+  nav ul li a{
+    font-size: 1.2em;
+  }
+  nav ul li{
+    padding: 0px 10px 0px 0px;
+    display: inline-block;
+  }
+}

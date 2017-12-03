@@ -12,6 +12,7 @@ export class CompraComponent implements OnInit {
   compras: Compra[];
   currentHeroName: string = "teste";
   searchId:number;
+  cadastroVisivel: boolean = false;
   constructor(private comprasService: CompraService) { }
   getCompras(): void {
     this.comprasService.getCompras()
@@ -27,6 +28,9 @@ export class CompraComponent implements OnInit {
       .subscribe(compra =>
         this.compras.push(compra)
       );
+  }
+  mostrarCadastro(){
+    this.cadastroVisivel = true;
   }
   // buscarcompras(){
   //   this.dataService.getHero(this.searchId);
