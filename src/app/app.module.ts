@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CompraComponent } from './compra/compra.component';
 import { MenuComponent } from './menu/menu.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
