@@ -6,15 +6,15 @@ Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 ## Requisitos atendidos
 
-Dos requisitos propostos, os seguintes foram atendidos:
-1.1-Cadastro de produtos (Nome)
-1.2-Compra de produtos (Produto, quantidade e preço)
-1.3-Listagem dos produtos comprados separados por compra (Nome, quantidade, preço de compra)
-1.4-Ser fácil de configurar e rodar em ambiente Unix (Linux ou Mac OS X)
-1.5-Só deve utilizar bibliotecas livres e gratuitas
+Dos requisitos propostos, os seguintes foram atendidos:</br>
+1.1-Cadastro de produtos (Nome)</br>
+1.2-Compra de produtos (Produto, quantidade e preço)</br>
+1.3-Listagem dos produtos comprados separados por compra (Nome, quantidade, preço de compra)</br>
+1.4-Ser fácil de configurar e rodar em ambiente Unix (Linux ou Mac OS X)</br>
+1.5-Só deve utilizar bibliotecas livres e gratuitas</br>
 
-2.2-Ter um design bonito e responsivo
-2.4-Angular(5.0.5)
+2.2-Ter um design bonito e responsivo</br>
+2.4-Angular(5.0.5)</br>
 
 ## Configuração do ambiente
 
