@@ -1,13 +1,35 @@
-<div class="col md-10">
+<div class="col md-12">
   <h2>Lista de produtos</h2>
-  <div class="col md-3">
-    <input #nome type="text" placeholder="Nome"/>
+  <div class="row">
+    <div class="col md-3">
+      <input #nome type="text" placeholder="Nome"/>
+    </div>
+    <button type="button" name="button" (click)="addProduto(nome.value); nome.value=''">Cadastrar</button>
   </div>
-  <button type="button" name="button" (click)="addProduto(nome.value); nome.value=''">Cadastrar</button>
-  <ul>
-    <li *ngFor="let produto of produtos ">
-        {{produto.nome}} <span>{{produto.id}}</span>
-    </li>
-  </ul>
+  <div class="row margin-top" *ngIf="mensagem !=''">
+    <div class="col md-3">
+      <div class="mensagem">
+        {{mensagem}} <span (click)="removerMensagem()">x</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="row margin-top">
+    <div class="col md-12">
+      <table>
+      <thead>
+       <tr>
+          <th>Nome do produto</th>
+       </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos ">
+          <td>{{produto.nome}}</td>
+        </tr>
+
+      </tbody>
+     </table>
+    </div>
+  </div>
 
 </div>

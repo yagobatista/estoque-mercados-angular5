@@ -9,8 +9,7 @@ import { ProdutoService } from '../produto.service';
 })
 export class ProdutoComponent implements OnInit {
   produtos: Produto[];
-  currentHeroName: string = "teste";
-  searchId:number;
+  mensagem:string = '';
   constructor(private produtosService: ProdutoService) { }
   getprodutos(): void {
     this.produtosService.getProdutos()
@@ -20,18 +19,16 @@ export class ProdutoComponent implements OnInit {
     this.getprodutos();
   }
   addProduto(name: string): void {
+    this.mensagem= '';
   name = name.trim();
-  if (!name) { return; }
+  if (!name) { this.mensagem="Dados inválidos!";return; }
   this.produtosService.addProduto({nome:name} as Produto)
     .subscribe(produto =>
       this.produtos.push(produto)
     );
+    this.mensagem = "Produto cadastrado com sucesso!";
   }
-  // buscarprodutos(){
-  //   this.dataService.getHero(this.searchId);
-  // }
-  clear(){
-    this.produtos= [];
+  removerMensagem(){
+    this.mensagem ='';
   }
-
 }

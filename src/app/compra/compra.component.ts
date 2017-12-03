@@ -16,7 +16,7 @@ export class CompraComponent implements OnInit {
   searchId:number;
   cadastroVisivel: boolean = false;
   temMensagem:boolean = false;
-  mensagem:string;
+  mensagem:string ='';
   constructor(private comprasService: CompraService,private produto: ProdutoComponent) { }
   getCompras(): void {
     this.comprasService.getCompras()
@@ -27,19 +27,21 @@ export class CompraComponent implements OnInit {
     this.produtos = this.produto.produtos;
     this.getCompras();
   }
-  addCompra(nome: string,quantidade:number,preco:number): void {
-    nome = nome.trim();
+  addCompra(id: number,quantidade:number,preco:number): void {
     // id do produto
-    var produto = 98060889;
-    if (!nome) { return; }
-    this.comprasService.addCompra({nome:nome,
+    if (!id||!quantidade || !preco) {
+      this.mensagem = "Dados inválidos!";
+      return;
+    }
+    this.comprasService.addCompra({
       quantidade:quantidade,
       preco:preco,
       data: '2326-02-18T02:08:33.312Z',
-      produto:produto} as Compra)
+      produto:id} as Compra)
     .subscribe(compra =>
         this.compras.push(compra)
       );
+      this.mensagem = "Compra cadastrada com sucesso!";
   }
   mostrarCadastro(){
     this.produto.getprodutos();
@@ -49,6 +51,9 @@ export class CompraComponent implements OnInit {
   // buscarcompras(){
   //   this.dataService.getHero(this.searchId);
   // }
+  removerMensagem(){
+    this.mensagem ='';
+  }
   clear(){
     this.compras= [];
   }
