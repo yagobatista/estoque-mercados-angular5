@@ -12,12 +12,8 @@ import { ProdutoService } from '../produto.service';
 export class CompraComponent implements OnInit {
   compras: Compra[];
   produtos: Produto[];
-  currentHeroName: string = "teste";
-  searchId:number;
   cadastroVisivel: boolean = false;
-  temMensagem:boolean = false;
   mensagem:string ='';
-  nomes:string[] = new Array();
   constructor(private comprasService: CompraService,private produtosService: ProdutoService) { }
   getCompras(): void {
     this.comprasService.getCompras()
