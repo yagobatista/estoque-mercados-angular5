@@ -1,7 +1,26 @@
-# EstoqueMercadosApp
+# Estoque Mercados App
+
+Desafio de front-end proposto pela empresa Wpensar, que consiste em desenvolver um sistema de estoque para um supermercado.
 
 Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
 
-## Servidor de desenvolvimento
+## Requisitos atendidos
 
-Rode o comando `ng serve` no terminal para iniciar o servidor de desenvolvimento. Entre no endereço `http://localhost:4200/`.
+Dos requisitos propostos, os seguintes foram atendidos:
+1.1-Cadastro de produtos (Nome)
+1.2-Compra de produtos (Produto, quantidade e preço)
+1.3-Listagem dos produtos comprados separados por compra (Nome, quantidade, preço de compra)
+1.4-Ser fácil de configurar e rodar em ambiente Unix (Linux ou Mac OS X)
+1.5-Só deve utilizar bibliotecas livres e gratuitas
+
+2.2-Ter um design bonito e responsivo
+2.4-Angular(5.0.5)
+
+## Configuração do ambiente
+
+Deve se ter instalado na máquina Node.js, npm e AngularCli, de acordo com a referência do angular https://angular.io/guide/quickstart.
+Assumindo que se encontra na pasta principal do projeto, deve-se rodar o seguinte comando `ng serve` no terminal para iniciar o servidor de desenvolvimento. E acessar o endereço `http://localhost:4200/`.
+
+## Bibliotecas
+
+Não foi utilizada qualquer biblioteca ou framework, além da padrão do angular(5.0.5).
