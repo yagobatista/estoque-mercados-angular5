@@ -38,8 +38,9 @@ white-space: normal !important;
 word-wrap: break-word;
 cursor: pointer;
 }
- input[type="text"] {
-    background-color: transparent;
+input[type="text"] ,
+  input[type="number"] {
+        background-color: transparent;
     border: none;
         border-bottom-width: medium;
         border-bottom-style: none;
@@ -64,6 +65,12 @@ box-sizing: border-box;
 }
 .row{
   margin: -15px;
+}
+.row:before,
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
 }
 .row , .col{
   box-sizing: border-box;
