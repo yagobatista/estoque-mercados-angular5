@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CompraComponent } from './compra/compra.component';
-import { AppRoutingModule } from './/app-routing.module';
+
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
