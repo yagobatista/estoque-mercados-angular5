@@ -3,7 +3,7 @@ import { Compra } from '../compra';
 import { Produto } from '../produto';
 import { Observable } from 'rxjs/Observable';
 import { CompraService } from '../compra.service';
-import { ProdutoComponent } from '../produto/produto.component';
+import { ProdutoService } from '../produto.service';
 @Component({
   selector: 'compra',
   templateUrl: './compra.component.html',
@@ -17,14 +17,15 @@ export class CompraComponent implements OnInit {
   cadastroVisivel: boolean = false;
   temMensagem:boolean = false;
   mensagem:string ='';
-  constructor(private comprasService: CompraService,private produto: ProdutoComponent) { }
+  nomes:string[] = new Array();
+  constructor(private comprasService: CompraService,private produtosService: ProdutoService) { }
   getCompras(): void {
     this.comprasService.getCompras()
       .subscribe(compras => this.compras = compras);
   }
   ngOnInit() {
-    this.produto.getprodutos();
-    this.produtos = this.produto.produtos;
+    this.produtosService.getProdutos()
+      .subscribe(produtos => this.produtos = produtos);
     this.getCompras();
   }
   addCompra(id: number,quantidade:number,preco:number): void {
@@ -44,8 +45,6 @@ export class CompraComponent implements OnInit {
       this.mensagem = "Compra cadastrada com sucesso!";
   }
   mostrarCadastro(){
-    this.produto.getprodutos();
-    this.produtos = this.produto.produtos;
     this.cadastroVisivel = true;
   }
   // buscarcompras(){

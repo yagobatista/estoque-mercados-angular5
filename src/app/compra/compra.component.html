@@ -46,13 +46,15 @@
         <th>Produto</th>
         <th>Quantidade</th>
         <th>Preço</th>
+        <th>Total</th>
      </tr>
     </thead>
     <tbody>
       <tr *ngFor="let compra of compras">
-        <td>{{compra.produto}}</td>
+        <td>{{produtos[0].nome}}</td>
         <td>{{compra.quantidade}}</td>
         <td>{{compra.preco}}</td>
+        <td>{{compra.preco*compra.quantidade}}</td>
       </tr>
 
     </tbody>
