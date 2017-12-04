@@ -23,8 +23,8 @@ export class CompraService {
     const url = `${this.compraUrl}/${id}`;
     return this.http.get<Compra>(url);
   }
-  addCompra(nome:string): Observable<Compra> {
-  return this.http.post<Compra>(this.compraUrl, nome, httpOptions);
+  addCompra(compra:Compra): Observable<Compra> {
+  return this.http.post<Compra>(this.compraUrl, compra, httpOptions);
   }
 
 }
